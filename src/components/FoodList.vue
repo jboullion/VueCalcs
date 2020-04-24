@@ -1,13 +1,31 @@
 <template>
-	<div id="food-list">
-		<b-list-group>
-			<b-list-group-item disabled>Cras justo odio</b-list-group-item>
-			<b-list-group-item>Dapibus ac facilisis in</b-list-group-item>
-			<b-list-group-item>Morbi leo risus</b-list-group-item>
-			<b-list-group-item disabled>Porta ac consectetur ac</b-list-group-item>
-			<b-list-group-item>Vestibulum at eros</b-list-group-item>
-		</b-list-group>
-	</div>
+	<v-list
+		:disabled="disabled"
+		:dense="dense"
+		:two-line="twoLine"
+		:three-line="threeLine"
+		:shaped="shaped"
+		:flat="flat"
+		:subheader="subheader"
+		:sub-group="subGroup"
+		:nav="nav"
+		:avatar="avatar"
+		:rounded="rounded"
+		>
+		<v-subheader>Food List</v-subheader>
+		<v-list-item-group v-model="item" color="primary">
+			<v-list-item
+			v-for="(food, i) in foods"
+			:key="i"
+			:inactive="inactive"
+			>
+			<v-list-item-content>
+				<v-list-item-title v-html="food.name"></v-list-item-title>
+				<v-list-item-subtitle v-html="food.calories"></v-list-item-subtitle>
+			</v-list-item-content>
+			</v-list-item>
+		</v-list-item-group>
+	</v-list>
 </template>
 
 <script>

@@ -1,13 +1,13 @@
 <template>
 	<v-app>
 		<v-app-bar
-		color="deep-purple accent-4"
+		color="light-green lighten-4"
 		dense
-		dark
+		
 		>
 		<v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-		<v-toolbar-title>Page title</v-toolbar-title>
+		<v-toolbar-title>Nutrition Calculator</v-toolbar-title>
 
 		<v-spacer></v-spacer>
 
@@ -42,15 +42,13 @@
 	</v-app-bar>
 
 	<v-content>
-		<v-container>
+		<v-container fluid>
 			<v-row>
 				<v-col>
-					<v-jumbotron header="Nutrition Calculator" lead="How much do you need to eat?">
-						<p>Build a list of food items to see what you would need to eat to reach your nutrition goals.</p>
-					</v-jumbotron>
+					<p class=".body-1">Build a list of food items to see what you would need to eat to reach your nutrition goals.</p>
 				</v-col>
 			</v-row>
-			<vb-row>
+			<v-row>
 				<v-col>
 					<Calculator v-bind:variables="variables" />
 
@@ -79,7 +77,60 @@ export default {
 				calories: 2000,
 				num_people: 1,
 			},
-			foods: [],
+			foods: [
+				{
+					name: 'Potato',
+					serving: 100, //g
+					calories: 90,
+					protein: 4,
+					fat: 1,
+					carbs: 10,
+					vitamins:{
+						a: 10,
+						b6: 23,
+						b12: 11
+					}
+				},
+				{
+					name: 'Tomato',
+					serving: 100, //g
+					calories: 90,
+					protein: 4,
+					fat: 1,
+					carbs: 10,
+					vitamins:{
+						a: 10,
+						b6: 23,
+						b12: 11
+					}
+				},
+				{
+					name: 'Beans',
+					serving: 100, //g
+					calories: 40,
+					protein: 4,
+					fat: 1,
+					carbs: 10,
+					vitamins:{
+						a: 10,
+						b6: 23,
+						b12: 11
+					}
+				},
+				{
+					name: 'Algaue',
+					serving: 100, //g
+					calories: 110,
+					protein: 4,
+					fat: 1,
+					carbs: 10,
+					vitamins:{
+						a: 10,
+						b6: 23,
+						b12: 11
+					}
+				},
+			],
 			facts: {
 				calories: 421, //kcals
 				total_fat: {
@@ -110,3 +161,10 @@ export default {
 	}
 };
 </script>
+
+<style>
+	
+
+
+</style>
+

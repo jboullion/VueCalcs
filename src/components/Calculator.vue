@@ -1,50 +1,35 @@
 <template>
-	<div id="calculator">
-		<!-- <div class="form-group">
-			<label for="num-people">Number of People</label>
-			<input type="number" class="form-control" id="num-people" value="1">
-		</div> -->
-		<div class="form-group">
-			<label for="calories">Calories</label>
-			<input type="number" class="form-control" id="calories" :value="variables.calories">
-		</div>
+	<v-form id="calculator">
+		<v-row>
+			<v-col cols="12" sm="6" md="3">
+				<v-text-field
+					label="Calories"
+				></v-text-field>
+			</v-col>
+		</v-row>
 
-		<div class="form-group">
-			<label for="food">Time</label>
-			<select class="form-control" id="food">
-				<option value="day">Day</option>
-				<option value="week">Week</option>
-				<option value="month">Month</option>
-				<option value="year">Year</option>
-			</select>
-		</div>
+			<v-select
+				:items="times"
+				label="Time"
+			></v-select>
 
-		<div class="form-group">
-			<label for="fat">% Fat</label>
-			<input type="number" class="form-control" id="fat" :value="variables.fat">
-		</div>
+			<v-text-field
+				label="% Fat"
+			></v-text-field>
 
-		<div class="form-group">
-			<label for="protein">% Protein</label>
-			<input type="number" class="form-control" id="protein" :value="variables.protein">
-		</div>
+			<v-text-field
+				label="% Protein"
+			></v-text-field>
 
-		<div class="form-group">
-			<label for="carbs">% Carbs</label>
-			<input type="number" class="form-control" id="carbs" :value="variables.carbs">
-		</div>
+			<v-text-field
+				label="% Carbs"
+			></v-text-field>
 
-		<div class="form-group">
-			<label for="food">Add Food</label>
-			<select class="form-control" id="food">
-				<option>Potatoes</option>
-				<option>Algae</option>
-				<option>Nutritional Yeast</option>
-				<option>Spinach</option>
-				<option>Beans</option>
-			</select>
-		</div>
-	</div>
+			<v-select
+				:items="foods"
+				label="Add Food"
+			></v-select>
+	</v-form>
 </template>
 
 <script>
@@ -64,18 +49,19 @@ export default {
 	props: ['variables'],
 	data() {
 		return {
-			// Initialized to zero to begin
-			
-			
+			times: ['day','week','month','year'],
+			// eventually this will come from an API
+			foods: [
+				'Potatoes',
+				'Algae',
+				'Nutritional Yeast',
+				'Spinach',
+				'Beans'
+			]
 		}
 	},
 	methods: {
-		increment() {
-			
-		},
-		decrement() {
-			
-		}
+
 	}
 }
 </script>
