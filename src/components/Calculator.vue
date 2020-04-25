@@ -33,14 +33,11 @@
 </template>
 
 <script>
-// TODO: Get a better select finder
-// https://joshuajohnson.co.uk/Choices/
-// https://selectize.github.io/selectize.js/
 
 // Maybe just build a custom search / dropdown?
-// https://www.nutritionix.com/business/api
 // https://fdc.nal.usda.gov/api-guide.html
-	
+
+
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
