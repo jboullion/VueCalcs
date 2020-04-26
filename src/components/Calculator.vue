@@ -1,34 +1,33 @@
 <template>
 	<v-form id="calculator">
-		<v-row>
-			<v-col cols="12" sm="6" md="3">
-				<v-text-field
-					label="Calories"
-				></v-text-field>
-			</v-col>
-		</v-row>
+	
+			<v-text-field
+				label="Calories"
+				dense
+			></v-text-field>
 
 			<v-select
 				:items="times"
 				label="Time"
+				dense
 			></v-select>
 
 			<v-text-field
 				label="% Fat"
+				dense
 			></v-text-field>
 
 			<v-text-field
 				label="% Protein"
+				dense
 			></v-text-field>
 
 			<v-text-field
 				label="% Carbs"
+				dense
 			></v-text-field>
 
-			<v-select
-				:items="foods"
-				label="Add Food"
-			></v-select>
+			
 	</v-form>
 </template>
 
@@ -47,14 +46,6 @@ export default {
 	data() {
 		return {
 			times: ['day','week','month','year'],
-			// eventually this will come from an API
-			foods: [
-				'Potatoes',
-				'Algae',
-				'Nutritional Yeast',
-				'Spinach',
-				'Beans'
-			]
 		}
 	},
 	methods: {

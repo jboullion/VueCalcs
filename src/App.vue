@@ -50,58 +50,58 @@ export default {
 				num_people: 1,
 			},
 			foods: [
-				{
-					name: 'Potato',
-					serving: 100, //g
-					calories: 90,
-					protein: 4,
-					fat: 1,
-					carbs: 10,
-					vitamins:{
-						a: 10,
-						b6: 23,
-						b12: 11
-					}
-				},
-				{
-					name: 'Tomato',
-					serving: 100, //g
-					calories: 90,
-					protein: 4,
-					fat: 1,
-					carbs: 10,
-					vitamins:{
-						a: 10,
-						b6: 23,
-						b12: 11
-					}
-				},
-				{
-					name: 'Beans',
-					serving: 100, //g
-					calories: 40,
-					protein: 4,
-					fat: 1,
-					carbs: 10,
-					vitamins:{
-						a: 10,
-						b6: 23,
-						b12: 11
-					}
-				},
-				{
-					name: 'Algaue',
-					serving: 100, //g
-					calories: 110,
-					protein: 4,
-					fat: 1,
-					carbs: 10,
-					vitamins:{
-						a: 10,
-						b6: 23,
-						b12: 11
-					}
-				},
+				// {
+				// 	name: 'Potato',
+				// 	serving: 100, //g
+				// 	calories: 90,
+				// 	protein: 4,
+				// 	fat: 1,
+				// 	carbs: 10,
+				// 	vitamins:{
+				// 		a: 10,
+				// 		b6: 23,
+				// 		b12: 11
+				// 	}
+				// },
+				// {
+				// 	name: 'Tomato',
+				// 	serving: 100, //g
+				// 	calories: 90,
+				// 	protein: 4,
+				// 	fat: 1,
+				// 	carbs: 10,
+				// 	vitamins:{
+				// 		a: 10,
+				// 		b6: 23,
+				// 		b12: 11
+				// 	}
+				// },
+				// {
+				// 	name: 'Beans',
+				// 	serving: 100, //g
+				// 	calories: 40,
+				// 	protein: 4,
+				// 	fat: 1,
+				// 	carbs: 10,
+				// 	vitamins:{
+				// 		a: 10,
+				// 		b6: 23,
+				// 		b12: 11
+				// 	}
+				// },
+				// {
+				// 	name: 'Algae',
+				// 	serving: 100, //g
+				// 	calories: 110,
+				// 	protein: 4,
+				// 	fat: 1,
+				// 	carbs: 10,
+				// 	vitamins:{
+				// 		a: 10,
+				// 		b6: 23,
+				// 		b12: 11
+				// 	}
+				// },
 			],
 			facts: {
 				calories: 421, //kcals
@@ -136,7 +136,17 @@ export default {
 
 <style>
 	
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 </style>
 
